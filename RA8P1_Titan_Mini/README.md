@@ -1,5 +1,4 @@
 # RA8P1 Titan Mini – Embedded Edge AI 
-
 ## Overview
 
 The Renesas RA8P1 Titan Mini acts as the main Edge AI processing unit in the MotorVision-EdgeAI system.
@@ -9,11 +8,13 @@ It receives image data from the ESP32-S3 through SPI, performs on-device AI infe
 ## Hardware and Software
 
 - Renesas RA8P1 Titan Mini
-- SPI communication interface
 - Renesas Flexible Software Package (FSP)
 - Hardware Abstraction Layer (HAL)
+- RT-Thread delay and console logging APIs
+- SPI communication interface
 - TensorFlow Lite Micro
 - INT8 quantized neural network model
+- Vela compiler for Ethos-U55 model compilation
 - J-Link for debugging and programming
 
 ## Functional Modules
@@ -31,12 +32,14 @@ It receives image data from the ESP32-S3 through SPI, performs on-device AI infe
 
 ### 3. Edge AI Inference
 - TensorFlow Lite Micro model integration
-- INT8 quantized model execution
-- On-device motor health-status classification
+- INT8 model quantization
+- Ethos-U55 model compilation using Vela
+- On-device model inference
+- Inference output processing
 
 ### 4. Status Indication
-- LED-based motor health-status indication
+- LED-based system status indication
 
 ## Role in the Overall System
 
-The RA8P1 Titan Mini performs the embedded inference stage of MotorVision-EdgeAI. It receives the camera image from the ESP32-S3, executes the deployed AI model locally, and indicates the resulting motor health status.
+The RA8P1 Titan Mini performs the embedded inference stage of MotorVision-EdgeAI. It receives the camera image from the ESP32-S3, executes the deployed AI model locally, processes the inference output, and provides system status indication.
