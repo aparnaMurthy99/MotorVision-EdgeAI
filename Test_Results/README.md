@@ -21,8 +21,8 @@ This folder contains experimental results, test observations, screenshots, and v
 
 ### 4. RA8P1 Titan Mini – Embedded Processing
 - Image reception results
-- Model execution observations
-- LED status indication
+- On-device model inference observations
+- LED-based system status indication
 - Embedded system testing
 
 ## Supporting Evidence
